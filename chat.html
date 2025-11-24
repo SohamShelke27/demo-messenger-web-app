@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minimal Messenger — Chat</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-row">
+      <a href="chats.html" class="back-link" aria-label="Back to chats">←</a>
+      <div id="chatTitle" class="chat-title">
+        <div class="avatar" id="chatAvatar">MM</div>
+        <div>
+          <div id="chatWith">Chat</div>
+          <div class="muted small" id="chatSubtitle">Active</div>
+        </div>
+      </div>
+      <div class="user-actions">
+        <button id="logoutBtn2" class="icon-btn" title="Logout">
+          <svg viewBox="0 0 24 24" aria-hidden><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/><path d="M8 5v14"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container chat-main">
+    <div class="messages" id="messages" aria-live="polite"></div>
+
+    <form id="sendForm" class="send-form">
+      <input id="msgInput" placeholder="Write a message…" autocomplete="off" required />
+      <button class="btn primary" type="submit">Send</button>
+    </form>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

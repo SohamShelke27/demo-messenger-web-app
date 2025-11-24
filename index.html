@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minimal Messenger — Sign up / Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container auth">
+    <div class="auth-card">
+      <div class="brand-row">
+        <svg class="logo" viewBox="0 0 24 24" aria-hidden><rect x="2" y="5" width="20" height="14" rx="3"/></svg>
+        <div>
+          <h1>Minimal Messenger</h1>
+          <p class="muted">Private demo • minimalist UI</p>
+        </div>
+      </div>
+
+      <div class="forms">
+        <form id="signupForm" class="form">
+          <h2>Create account</h2>
+          <label class="field"><input id="su_name" placeholder="Full name" required /></label>
+          <label class="field"><input id="su_email" type="email" placeholder="Email" required /></label>
+          <label class="field"><input id="su_pass" type="password" placeholder="Password" required /></label>
+          <div class="row">
+            <button class="btn primary" type="submit">Create account</button>
+            <button id="toLogin" type="button" class="btn ghost">Have account?</button>
+          </div>
+        </form>
+
+        <form id="loginForm" class="form hidden">
+          <h2>Login</h2>
+          <label class="field"><input id="li_email" type="email" placeholder="Email" required /></label>
+          <label class="field"><input id="li_pass" type="password" placeholder="Password" required /></label>
+          <div class="row">
+            <button class="btn primary" type="submit">Login</button>
+            <button id="toSignup" type="button" class="btn ghost">Create account</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="authMsg" class="auth-msg" role="status" aria-live="polite"></div>
+
+      <footer class="small muted">Built for demo • Replace Firebase config in <code>js/app.js</code></footer>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

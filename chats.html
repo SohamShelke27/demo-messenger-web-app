@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minimal Messenger — Chats</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-row">
+      <div class="brand-small">
+        <svg class="logo" viewBox="0 0 24 24" aria-hidden><rect x="2" y="5" width="20" height="14" rx="3"/></svg>
+        <div><strong>Minimal</strong> Messenger</div>
+      </div>
+      <div class="user-actions">
+        <button id="profileBtn" class="icon-btn" title="Profile">
+          <svg viewBox="0 0 24 24" aria-hidden><circle cx="12" cy="8" r="3"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </button>
+        <button id="logoutBtn" class="icon-btn" title="Logout">
+          <svg viewBox="0 0 24 24" aria-hidden><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/><path d="M8 5v14"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <aside class="sidebar">
+      <div class="search">
+        <input id="searchUser" placeholder="Search people (name or email)" />
+      </div>
+      <div id="searchResults" class="list"></div>
+      <hr />
+      <h3 class="muted">Your chats</h3>
+      <div id="chatsList" class="list"></div>
+    </aside>
+
+    <section class="panel empty" id="panelEmpty">
+      <div class="panel-center">
+        <svg width="96" height="96" viewBox="0 0 24 24" aria-hidden><path d="M4 4h16v10H7l-3 3z" /></svg>
+        <h3>Open a chat</h3>
+        <p class="muted">Select or start a conversation from the left.</p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
